@@ -10,8 +10,12 @@
     padding: 5px;
     gap: 20px;
     background-color: rgba(62, 86, 146, 0.727);
+    /* background-color: rgba(0, 0, 1, 0.586); */
     color: whitesmoke;
     border: none;
+
+
+
     border-radius: 6px;
 }
 
@@ -42,6 +46,6 @@
 
 .contactsButton:hover {
     background: rgba(62, 114, 146, 0.727);
-    color: whitesmoke;
+    color: whitesmoke; 
     border: none;
 }
