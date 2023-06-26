@@ -31,7 +31,7 @@ export default function ContactsList() {
             <span>{contact.name}</span>
           </div>
           <div className={css.contactsNumber}>
-            <span>{contact.phone}</span>
+            <span>{contact.number}</span>
           </div>
           <div>
             <button
