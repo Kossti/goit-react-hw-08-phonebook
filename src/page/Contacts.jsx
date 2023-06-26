@@ -6,6 +6,7 @@ import css from '../components/ContactsApp/ContactsApp.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from 'redux/contacts/operations';
 import { getError, getIsLoading } from 'redux/contacts/selectors';
+import { Helmet } from 'react-helmet';
 
 export const ContactsApp = () => {
   const dispatch = useDispatch();
@@ -18,6 +19,9 @@ export const ContactsApp = () => {
 
   return (
     <div className={css.section}>
+      <Helmet>
+        <title>Your contacts</title>
+      </Helmet>
       <h1 className={css.sectionTitel}>Phonebook</h1>
       <ContactsForm />
       {isLoading && !error && <b>Request in progress...</b>}
