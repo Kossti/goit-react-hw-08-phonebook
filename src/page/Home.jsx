@@ -1,3 +1,4 @@
+import { useAuth } from 'hooks';
 import React from 'react';
 
 const styles = {
@@ -15,12 +16,14 @@ const styles = {
 };
 
 export default function Home() {
-  <div style={styles.container}>
-    <h1 style={styles.title}>
-      Hello everybody{' '}
-      <span role="img" aria-label="Greeting icon">
-        💁‍♀️
-      </span>
-    </h1>
-  </div>;
+  const { isLoggedIn } = useAuth();
+  return (
+    <div>
+      {isLoggedIn ? (
+        <h2 style={styles.title}>Your Phonebook!</h2>
+      ) : (
+        <h2 style={styles.title}>Register or login to access the phonebook!</h2>
+      )}
+    </div>
+  );
 }
