@@ -9,7 +9,7 @@ export default function ContactsForm() {
   const savedContacts = useSelector(getContacts);
 
   const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
+  const [number, setNumber] = useState('');
 
   const handleNameChange = event => {
     const { value } = event.target;
@@ -18,23 +18,23 @@ export default function ContactsForm() {
 
   const handlePhoneChange = event => {
     const { value } = event.target;
-    setPhone(value);
+    setNumber(value);
   };
 
   const resetForm = () => {
     setName('');
-    setPhone('');
+    setNumber('');
   };
 
   const handleSubmit = event => {
     event.preventDefault();
 
     const contactExists = savedContacts.some(
-      contact => contact.name === name || contact.phone === phone
+      contact => contact.name === name || contact.number === number
     );
 
     if (!contactExists) {
-      dispatch(addContact({ name, phone }));
+      dispatch(addContact({ name, number }));
     } else {
       alert('Such a contact already exists in the phonebook!');
     }
@@ -67,7 +67,7 @@ export default function ContactsForm() {
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
           onChange={handlePhoneChange}
-          value={phone}
+          value={number}
         />
       </label>
       <button className={css.formButton} type="submit">

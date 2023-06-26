@@ -11,11 +11,11 @@ export default function ContactsList() {
 
   const filteredContacts = useSelector(state => {
     if (filterValue) {
-      return state.contacts.items.filter(contact =>
+      return state.contacts.contacts.filter(contact =>
         contact.name.toLowerCase().includes(filterValue.toLowerCase().trim())
       );
     } else {
-      return state.contacts.items;
+      return state.contacts.contacts;
     }
   });
 
