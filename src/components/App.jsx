@@ -1,4 +1,5 @@
-import React, { lazy, useEffect } from 'react';
+import React, { useEffect } from 'react';
+// import { lazy } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout';

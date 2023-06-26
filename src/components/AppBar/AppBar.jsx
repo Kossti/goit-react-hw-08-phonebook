@@ -7,6 +7,8 @@ import { AuthNav } from 'components/AuthNav/AuthNav';
 const styles = {
   header: {
     display: 'flex',
+    color: 'black',
+    backgroundColor: 'rgba(62, 86, 146, 0.727)',
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: '16px',
